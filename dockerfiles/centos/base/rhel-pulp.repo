@@ -4,7 +4,7 @@
 [pulp-v2-stable]
 name=Pulp v2 Production Releases
 baseurl=http://repos.fedorapeople.org/repos/pulp/pulp/stable/2/7Server/$basearch/
-enabled=1
+enabled=0
 skip_if_unavailable=1
 gpgcheck=0
 
@@ -19,8 +19,8 @@ gpgcheck=0
 # Weekly Testing Builds
 [pulp-v2-testing]
 name=Pulp v2 Testing Builds
-baseurl=http://repos.fedorapeople.org/repos/pulp/pulp/testing/$releasever/$basearch/
-enabled=0
+baseurl=http://repos.fedorapeople.org/repos/pulp/pulp/testing/2.5/$releasever/$basearch/
+enabled=1
 skip_if_unavailable=1
 gpgcheck=0
 

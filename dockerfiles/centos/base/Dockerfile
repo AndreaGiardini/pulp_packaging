@@ -12,6 +12,8 @@ RUN yum update -y && \
 RUN yum install -y git findutils && \
     yum clean all
 
+RUN yum install pulp-docker-plugins
+
 # install pulp_docker plugin to manage docker image repositories
 RUN git clone --single-branch https://github.com/pulp/pulp_docker.git /opt/pulp_docker
 
