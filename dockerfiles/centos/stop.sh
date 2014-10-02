@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+
+# stop and remove pulp-related containers
 for NAME in beat resource_manager worker1 worker2 pulpapi crane
 do
     echo stopping and removing $NAME
