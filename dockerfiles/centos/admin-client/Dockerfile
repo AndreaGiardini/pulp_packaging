@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER Aaron Weitekamp <aweiteka@redhat.com>
+MAINTAINER Pulp Team <pulp-list@redhat.com>
 
 ADD rhel-pulp.repo /etc/yum.repos.d/rhel-pulp.repo
 
@@ -10,10 +10,10 @@ RUN  yum update -y && \
      yum groupinstall -y \
          pulp-admin && \
      yum install -y \
-         python-pulp-rpm-common pulp-docker-admin-extensions && \
+         pulp-docker-admin-extensions && \
      yum clean all
 
 # config and uploads dir
-VOLUME ["/.pulp", "/run/pulp_uploads"]
+VOLUME ["/.pulp /run/pulp_uploads"]
 
-ENTRYPOINT ["/usr/bin/pulp-admin"]
+ADD admin.conf /.pulp/admin.conf
